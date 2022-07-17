@@ -1,0 +1,41 @@
+GET http://localhost:3000/user/register
+
+###
+
+
+POST http://localhost:3002/user/register
+Content-Type: application/json
+
+{
+    "email":"quybui@gmail.com",
+    "password":"123456"
+}
+
+###
+POST http://localhost:3002/user/login
+Content-Type: application/json
+
+{
+    "email":"quybui@gmail.com",
+    "password":"123456"
+}
+###
+DELETE  http://localhost:3002/user/logout
+Content-Type: application/json
+
+{
+    "refreToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM0Njk4YzdhOGIyZDg5MGQ1MTFkMmUiLCJpYXQiOjE2NTgwNzAyMjAsImV4cCI6MTY1ODA3MzgyMH0.Qb-Ochu3fr3lPlWza4fghgGptfKqNKOD2FGZXOLD_pE"
+}
+
+###
+POST http://localhost:3002/user/refresh-token
+Content-Type: application/json
+
+{
+    "refreToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM0Njk4YzdhOGIyZDg5MGQ1MTFkMmUiLCJpYXQiOjE2NTgwNzAwODEsImV4cCI6MTY1ODA3MzY4MX0.aMbFuXdmvqtt5vLNMcRQwILlcgPFwIrliV2pzmulHVM"
+}
+
+
+###
+GET http://localhost:3002/user/list-Users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM0Njk4YzdhOGIyZDg5MGQ1MTFkMmUiLCJpYXQiOjE2NTgwNzAwODEsImV4cCI6MTY1ODA3MDE0MX0.rHVAkLd8vU3dAdIhDlgigoWRgJwkc1986ojgY39WrK0
